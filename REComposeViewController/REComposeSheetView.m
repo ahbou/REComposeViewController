@@ -79,6 +79,7 @@
         if (!REUIKitIsFlatMode()) {
             _attachmentImageView.layer.cornerRadius = 3.0f;
         }
+        _attachmentImageView.contentMode = UIViewContentModeScaleAspectFill;
         _attachmentImageView.layer.masksToBounds = YES;
         [_attachmentView addSubview:_attachmentImageView];
         
