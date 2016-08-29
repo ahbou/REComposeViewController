@@ -28,6 +28,7 @@
 		30554D26163255070069220E /* foursquare-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30554D25163255070069220E /* foursquare-logo@2x.png */; };
 		30B35CF517E54C820082CE0E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B35CF417E54C820082CE0E /* RECommonFunctions.m */; };
 		30FD6D641631F8550017516D /* REComposeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30FD6D631631F8550017516D /* REComposeViewController.bundle */; };
+		E227A0321D74A45C00716F8A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E227A0311D74A45C00716F8A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		30B35CF317E54C820082CE0E /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		30B35CF417E54C820082CE0E /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		30FD6D631631F8550017516D /* REComposeViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = REComposeViewController.bundle; sourceTree = "<group>"; };
+		E227A0311D74A45C00716F8A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				30118CDD1631D0DD00B82F14 /* Default.png */,
 				30118CDF1631D0DD00B82F14 /* Default@2x.png */,
 				30118CE11631D0DD00B82F14 /* Default-568h@2x.png */,
+				E227A0311D74A45C00716F8A /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,8 +188,13 @@
 		30118CBE1631D0DD00B82F14 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Roman Efimov";
+				TargetAttributes = {
+					30118CC61631D0DD00B82F14 = {
+						DevelopmentTeam = BPWW25E9GK;
+					};
+				};
 			};
 			buildConfigurationList = 30118CC11631D0DD00B82F14 /* Build configuration list for PBXProject "REComposeViewControllerExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -213,6 +221,7 @@
 				30118CD61631D0DD00B82F14 /* InfoPlist.strings in Resources */,
 				30118CDE1631D0DD00B82F14 /* Default.png in Resources */,
 				30118CE01631D0DD00B82F14 /* Default@2x.png in Resources */,
+				E227A0321D74A45C00716F8A /* Launch Screen.storyboard in Resources */,
 				30118CE21631D0DD00B82F14 /* Default-568h@2x.png in Resources */,
 				30FD6D641631F8550017516D /* REComposeViewController.bundle in Resources */,
 				30554D21163231F00069220E /* Flower.jpg in Resources */,
@@ -258,7 +267,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -266,6 +274,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -287,7 +296,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -317,9 +325,10 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "REComposeViewControllerExample/REComposeViewControllerExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanefimov.REComposeViewControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "48FE4017-C1BC-4B45-B4FF-A16C301799CD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "48FE4017-C1BC-4B45-B4FF-A16C301799CD";
+				PROVISIONING_PROFILE = "1b5f3d72-072d-473b-b557-0020131a8066";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1b5f3d72-072d-473b-b557-0020131a8066";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -329,12 +338,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REComposeViewControllerExample/REComposeViewControllerExample-Prefix.pch";
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "REComposeViewControllerExample/REComposeViewControllerExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanefimov.REComposeViewControllerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1b5f3d72-072d-473b-b557-0020131a8066";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
